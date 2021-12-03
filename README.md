@@ -392,6 +392,16 @@ Add an AdminSeeder For Admin Login Creadentials
 ```
 php artisan make:seeder AdminSeeder 
 ```
+```
+public function run()
+    {
+        Admin::create([
+            'name' => 'Admin',
+            'email' => 'admin@towhid.com',
+            'password' => Hash::make("123456"),
+        ]);
+    }
+```
 Register This Seeder In <b>seeders/DatabaseSeeder.php</b>
 ```
 public function run()
